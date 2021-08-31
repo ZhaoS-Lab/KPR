@@ -31,16 +31,16 @@ fastq2=''     # RNA-seq fastq file 2 (reverse)
 
 3.  Adjust two running paramenters: 1) the K-mer length, K; and 2) the number of assembly runs, N, based on the input RNA-seq data. Normally, we would suggest K=half of the RNA-seq read length and N>=1000. Larger N will take more time, but will yield more comprehensive genotyping.  
   
-K=50          # K-mer length
+K=50          # K-mer length  
 N=30000       # The number of assembly runs  
   
 4.  Required package/software loading:  the shell script contain lines for loading required package/software that are unique to the UGA (Sapelo2) platform.  If your platform uses a different approach of loading package/software, you will need to make corresponding changes in the script for lines below.  
   
-module load SAMtools/1.9-GCC-8.3.0
-module load Trimmomatic/0.39-Java-1.8.0_144
-module load BWA/0.7.17-GCC-8.3.0
-module load SRA-Toolkit/2.10.8-centos_linux64
-module load Clustal-Omega/1.2.4-GCC-8.3.0
+module load SAMtools/1.9-GCC-8.3.0  
+module load Trimmomatic/0.39-Java-1.8.0_144  
+module load BWA/0.7.17-GCC-8.3.0  
+module load SRA-Toolkit/2.10.8-centos_linux64  
+module load Clustal-Omega/1.2.4-GCC-8.3.0  
   
 5.  Once the shell script is finishing running, the result file, Genotyping_result_withGeneAssignment.stat, will appear in the $result directory you specified, containing the following columns: 
  
@@ -61,7 +61,8 @@ module load Clustal-Omega/1.2.4-GCC-8.3.0
 [15] Polymorphic site supporting read counts (e.g. 89A:200 means 200 reads carry “A” at position 89)  
 [16] Read pair linkages (e.g. 89A;132C;213A;215C;216T;217G;219A(42) means 42 read pairs span polymorphic sites 89-132-213-215-216-217-219, with a linkage of A-C-A-C-T-G-A at these positions, respectively)  
   
-An example output line is provided below:  
+
+#### An example output line is provided below:  
 
 Dog_ID  NormAlign_1     0.157251481896  DLA-88*006:01   DLA-88*006      DLA-88  GSHSLRYFYTSVSRPGRGDPRFIAVGYVDDTQFVRFDSDAATGRTEPRAPWVEQEGPEYWDPQTRTIKETAQLYRVDLDTLRGYYNQSEAGSHTRQTMYGCDLGPGGRLLRGYSQDAYDGADYIALNEDLRSYTAADTAAQITRRKWEAAGTAEHDRNYLETTCVEWLRRYLEMGKETLQRA     PQTRTIKETAQLYRVDGSHTRQTMYGCDLGPGGRLLRGYSQDTAEHDR        GCTCCCACTCCCTGAGGTATTTCTACACCTCCGTGTCCCGGCCCGGCCGCGGGGACCCCCGCTTCATCGCCGTCGGCTACGTGGACGACACGCAGTTCGTGCGGTTCGACAGCGACGCGGCCACTGGGAGGACGGAGCCGCGGGCGCCGTGGGTGGAGCAGGAGGGGCCGGAGTATTGGGACCCGCAGACGCGGACCATCAAGGAGACCGCACAGCTGTACCGAGTGGACCTGGACACCCTGCGCGGCTACTACAACCAGAGCGAGGCCGGGTCTCACACCCGCCAGACCATGTACGGCTGTGACCTGGGGCCCGGCGGGCGCCTCCTCCGCGGGTACAGTCAGGACGCCTACGACGGCGCCGATTACATCGCCCTGAACGAGGACCTGCGCTCCTACACCGCGGCGGACACGGCGGCGCAGATCACCCGGCGCAAGTGGGAAGCGGCAGGTACTGCAGAGCACGATAGGAACTACCTGGAGACGACGTGCGTGGAGTGGCTGCGGAGGTACCTGGAGATGGGGAAGGAGACGCTGCAGCGCGCAG       Known allele    29069.0 0.157251481896  29069.0 89A_132C(116/265),89A_213A(46/107),89A_215C(46/106), …	89A:200,132C:186,213A:157, …	89A(44),89A;132C(71),89A;132C;213A;215C;216T;217G(2), …
 
