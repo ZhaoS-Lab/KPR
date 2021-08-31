@@ -35,7 +35,7 @@ fastq2=''     # RNA-seq fastq file 2 (reverse)
 3.  Adjust two running paramenters: 1) the K-mer length, K; and 2) the number of assembly runs, N, based on the input RNA-seq data. Normally, we would suggest K=half of the RNA-seq read length and N>=1000. Larger N will take more time, but will yield more comprehensive genotyping.  
 ```
 K=50          # K-mer length  
-N=30000       # The number of assembly runs  
+N=1000       # The number of assembly runs  
 ```
 
 4.  Required package/software loading:  the shell script contain lines for loading required package/software that are unique to the UGA (Sapelo2) platform.  If your platform uses a different approach of loading package/software, you will need to make corresponding changes in the script for lines below.  
