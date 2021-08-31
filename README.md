@@ -32,10 +32,15 @@ fastq1=''     # RNA-seq fastq file 1 (forward)
 fastq2=''     # RNA-seq fastq file 2 (reverse)  
 ```
 
-3.  Adjust two running paramenters: 1) the K-mer length, K; and 2) the number of assembly runs, N, based on the input RNA-seq data. Normally, we would suggest K=half of the RNA-seq read length and N>=1000. Larger N will take more time, but will yield more comprehensive genotyping.  
+3.  Adjust parameters: 1) the K-mer length, K; and 2) the number of assembly runs, N, based on the input RNA-seq data. Normally, we would suggest K=half of the RNA-seq read length and N>=1000. Larger N will take more time, but will yield more comprehensive genotyping.  
+Other parameters include 3) DLA-88 depth; 4) DLA-12 depth; and 5) Identical length, which are used to identify chimeric and likely-chimeric assemblies. DLA-88 and DLA-12 depths are the minimum number of reads spanning polymorphic site-pairs. Identical length means the tolerable sequence length (nucleotides) shared by two assemblies.  
 ```
-K=50          # K-mer length  
-N=1000       # The number of assembly runs  
+K=50     # K-mer length  
+N=1000     # The number of assembly runs  
+
+DLA88_cutoffDepth=30     # DLA-88 depth  
+DLA12_cutoffDepth=56     # DLA-12 depth  
+cutoffLength=270     # Tolerable identical sequence length shared by any two assemblies
 ```
 
 4.  Required package/software loading:  the shell script contain lines for loading required package/software that are unique to the UGA (Sapelo2) platform.  If your platform uses a different approach of loading package/software, you will need to make corresponding changes in the script for lines below.  
