@@ -17,7 +17,7 @@ The following package/software are required to run the KPR de novo assembler and
 ### **Usage**
 The package contains a Unix/Linux shell script (KPR_canine_MHC-I_assemblerNgenotyper.sh), a Python script directory and a DLA-I allele reference directory.  
 
-##### Steps to run the package  
+#### Steps to run the package  
 1. Downloading the package (Linux/Unix platform is required)  
 2. Modify the shell script by specifying the actual path to the Python script directory, the input RNA-seq fastq file directory, the result directory, and the reference directory, as well as the names of both the forward and reverse RNA-seq fastq files, as below.
 
@@ -46,22 +46,23 @@ module load Clustal-Omega/1.2.4-GCC-8.3.0
  
 [1] Sample  
 [2] Contig name  
-[3] Relative expression level in the sample
+[3] Relative expression level in the sample  
 [4] Allele name (if match a known allele)  
-[5] Allele group name (if match a known allele group based on hypervariable regions) 
+[5] Allele group name (if match a known allele group based on hypervariable regions)  
 [6] Gene name  
 [7] Exons 2 and 3 protein sequence  
-[8] Hypervariable region protein sequence 
-[9] Exons 2 and 3 nucleotide sequence
-[10] Allele confidence
-[11] Actually expression level (Exons 2 and 3 reads assigned to this contig)
-[12] Relative expression level in the sample before adjustment (reallocate Chimeric expression levels)
-[13] Actually expression level before adjustment
-[14] Evidence of pairwise polymorphic site linkages (e.g. 89A_132C(116/265) means current contig carries “A” at position 89 and “C” at position 132, a total of 265 reads span these two positions while 116 reads support this A-C linkage)
-[15] Polymorphic site supporting read counts (e.g. 89A:200 means 200 reads carry “A” at position 89)
-[16] Read pair linkages (e.g. 89A;132C;213A;215C;216T;217G;219A(42) means 42 read pairs span polymorphic sites 89-132-213-215-216-217-219, with a linkage of A-C-A-C-T-G-A at these positions, respectively) 
+[8] Hypervariable region protein sequence  
+[9] Exons 2 and 3 nucleotide sequence  
+[10] Allele confidence  
+[11] Actually expression level (Exons 2 and 3 reads assigned to this contig)  
+[12] Relative expression level in the sample before adjustment (reallocate Chimeric expression levels)  
+[13] Actually expression level before adjustment  
+[14] Evidence of pairwise polymorphic site linkages (e.g. 89A_132C(116/265) means current contig carries “A” at position 89 and “C” at position 132, a total of 265 reads span these two positions while 116 reads support this A-C linkage)  
+[15] Polymorphic site supporting read counts (e.g. 89A:200 means 200 reads carry “A” at position 89)  
+[16] Read pair linkages (e.g. 89A;132C;213A;215C;216T;217G;219A(42) means 42 read pairs span polymorphic sites 89-132-213-215-216-217-219, with a linkage of A-C-A-C-T-G-A at these positions, respectively)  
   
 An example output line is provided below:  
 
 Dog_ID  NormAlign_1     0.157251481896  DLA-88*006:01   DLA-88*006      DLA-88  GSHSLRYFYTSVSRPGRGDPRFIAVGYVDDTQFVRFDSDAATGRTEPRAPWVEQEGPEYWDPQTRTIKETAQLYRVDLDTLRGYYNQSEAGSHTRQTMYGCDLGPGGRLLRGYSQDAYDGADYIALNEDLRSYTAADTAAQITRRKWEAAGTAEHDRNYLETTCVEWLRRYLEMGKETLQRA     PQTRTIKETAQLYRVDGSHTRQTMYGCDLGPGGRLLRGYSQDTAEHDR        GCTCCCACTCCCTGAGGTATTTCTACACCTCCGTGTCCCGGCCCGGCCGCGGGGACCCCCGCTTCATCGCCGTCGGCTACGTGGACGACACGCAGTTCGTGCGGTTCGACAGCGACGCGGCCACTGGGAGGACGGAGCCGCGGGCGCCGTGGGTGGAGCAGGAGGGGCCGGAGTATTGGGACCCGCAGACGCGGACCATCAAGGAGACCGCACAGCTGTACCGAGTGGACCTGGACACCCTGCGCGGCTACTACAACCAGAGCGAGGCCGGGTCTCACACCCGCCAGACCATGTACGGCTGTGACCTGGGGCCCGGCGGGCGCCTCCTCCGCGGGTACAGTCAGGACGCCTACGACGGCGCCGATTACATCGCCCTGAACGAGGACCTGCGCTCCTACACCGCGGCGGACACGGCGGCGCAGATCACCCGGCGCAAGTGGGAAGCGGCAGGTACTGCAGAGCACGATAGGAACTACCTGGAGACGACGTGCGTGGAGTGGCTGCGGAGGTACCTGGAGATGGGGAAGGAGACGCTGCAGCGCGCAG       Known allele    29069.0 0.157251481896  29069.0 89A_132C(116/265),89A_213A(46/107),89A_215C(46/106), …	89A:200,132C:186,213A:157, …	89A(44),89A;132C(71),89A;132C;213A;215C;216T;217G(2), …
+
 
