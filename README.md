@@ -20,7 +20,7 @@ The package contains a Unix/Linux shell script (KPR_canine_MHC-I_assemblerNgenot
 ### Steps to run the package  
 1. Downloading the package (Linux/Unix platform is required)  
 2. Modify the shell script by specifying the actual path to the Python script directory, the input RNA-seq fastq file directory, the result directory, and the reference directory, as well as the names of both the forward and reverse RNA-seq fastq files, as below.
-
+```
 script=''     # path to the KPR scripts  
 data=''       # path to the RNA-seq paired-end fastq files  
 result=''     # path to the output directory  
@@ -28,6 +28,7 @@ ref=''        # path to the KPR reference
 
 fastq1=''     # RNA-seq fastq file 1 (forward)  
 fastq2=''     # RNA-seq fastq file 2 (reverse)  
+```
 
 3.  Adjust two running paramenters: 1) the K-mer length, K; and 2) the number of assembly runs, N, based on the input RNA-seq data. Normally, we would suggest K=half of the RNA-seq read length and N>=1000. Larger N will take more time, but will yield more comprehensive genotyping.  
   
@@ -65,4 +66,3 @@ module load Clustal-Omega/1.2.4-GCC-8.3.0
 ### An example output line is provided below:  
 
 Dog_ID  NormAlign_1     0.157251481896  DLA-88*006:01   DLA-88*006      DLA-88  GSHSLRYFYTSVSRPGRGDPRFIAVGYVDDTQFVRFDSDAATGRTEPRAPWVEQEGPEYWDPQTRTIKETAQLYRVDLDTLRGYYNQSEAGSHTRQTMYGCDLGPGGRLLRGYSQDAYDGADYIALNEDLRSYTAADTAAQITRRKWEAAGTAEHDRNYLETTCVEWLRRYLEMGKETLQRA     PQTRTIKETAQLYRVDGSHTRQTMYGCDLGPGGRLLRGYSQDTAEHDR        GCTCCCACTCCCTGAGGTATTTCTACACCTCCGTGTCCCGGCCCGGCCGCGGGGACCCCCGCTTCATCGCCGTCGGCTACGTGGACGACACGCAGTTCGTGCGGTTCGACAGCGACGCGGCCACTGGGAGGACGGAGCCGCGGGCGCCGTGGGTGGAGCAGGAGGGGCCGGAGTATTGGGACCCGCAGACGCGGACCATCAAGGAGACCGCACAGCTGTACCGAGTGGACCTGGACACCCTGCGCGGCTACTACAACCAGAGCGAGGCCGGGTCTCACACCCGCCAGACCATGTACGGCTGTGACCTGGGGCCCGGCGGGCGCCTCCTCCGCGGGTACAGTCAGGACGCCTACGACGGCGCCGATTACATCGCCCTGAACGAGGACCTGCGCTCCTACACCGCGGCGGACACGGCGGCGCAGATCACCCGGCGCAAGTGGGAAGCGGCAGGTACTGCAGAGCACGATAGGAACTACCTGGAGACGACGTGCGTGGAGTGGCTGCGGAGGTACCTGGAGATGGGGAAGGAGACGCTGCAGCGCGCAG       Known allele    29069.0 0.157251481896  29069.0 89A_132C(116/265),89A_213A(46/107),89A_215C(46/106), …	89A:200,132C:186,213A:157, …	89A(44),89A;132C(71),89A;132C;213A;215C;216T;217G(2), …
-
