@@ -1,12 +1,12 @@
 # KPR
 # **A Kmer-based paired-end read (KPR) *de novo* assembler and genotyper to genotype major histocompatibility complex class I (MHC-I) alleles for the dog** 
 
-Kmer-based paired-end read (KPR) de novo assembler and genotyper take paired-end RNA-seq reads of an individual as input and output the MHC-I alleles of the individual.  The tools currently only work for the dog, consisting of the following steps: 1) mapping paired-RNA-seq reads to the canine MHC-I (i.e., DLA-I) reference alleles; 2) assemble paired-end RNA-seq reads mapped to the DLA-I regions into contigs de novo; and 3) genotyping the assembled contig.  
+Kmer-based paired-end read (KPR) *de novo* assembler and genotyper take paired-end RNA-seq reads of an individual as input and output the MHC-I alleles of the individual.  The tools currently only work for the dog, consisting of the following steps: 1) mapping paired-RNA-seq reads to the canine MHC-I (i.e., DLA-I) reference alleles; 2) assemble paired-end RNA-seq reads mapped to the DLA-I regions into contigs *de novo*; and 3) genotyping the assembled contig.  
 
 The software is described in detail at https://www.biorxiv.org/content/10.1101/2020.07.15.205559v2.   
 
-### **Requirements**
-The following package/software are required to run the KPR de novo assembler and genotyper  
+## **Requirements**
+The following package/software are required to run the KPR *de novo* assembler and genotyper  
   Python 2.7.14  
   SAMtools 1.9  
   Trimmomatic 0.39  
@@ -14,10 +14,10 @@ The following package/software are required to run the KPR de novo assembler and
   Clustal-Omega 1.2.4  
 
 
-### **Usage**
+## **Usage**
 The package contains a Unix/Linux shell script (KPR_canine_MHC-I_assemblerNgenotyper.sh), a Python script directory and a DLA-I allele reference directory.  
 
-#### Steps to run the package  
+### Steps to run the package  
 1. Downloading the package (Linux/Unix platform is required)  
 2. Modify the shell script by specifying the actual path to the Python script directory, the input RNA-seq fastq file directory, the result directory, and the reference directory, as well as the names of both the forward and reverse RNA-seq fastq files, as below.
 
@@ -62,8 +62,7 @@ module load Clustal-Omega/1.2.4-GCC-8.3.0
 [16] Read pair linkages (e.g. 89A;132C;213A;215C;216T;217G;219A(42) means 42 read pairs span polymorphic sites 89-132-213-215-216-217-219, with a linkage of A-C-A-C-T-G-A at these positions, respectively)  
   
 
-#### An example output line is provided below:  
+### An example output line is provided below:  
 
 Dog_ID  NormAlign_1     0.157251481896  DLA-88*006:01   DLA-88*006      DLA-88  GSHSLRYFYTSVSRPGRGDPRFIAVGYVDDTQFVRFDSDAATGRTEPRAPWVEQEGPEYWDPQTRTIKETAQLYRVDLDTLRGYYNQSEAGSHTRQTMYGCDLGPGGRLLRGYSQDAYDGADYIALNEDLRSYTAADTAAQITRRKWEAAGTAEHDRNYLETTCVEWLRRYLEMGKETLQRA     PQTRTIKETAQLYRVDGSHTRQTMYGCDLGPGGRLLRGYSQDTAEHDR        GCTCCCACTCCCTGAGGTATTTCTACACCTCCGTGTCCCGGCCCGGCCGCGGGGACCCCCGCTTCATCGCCGTCGGCTACGTGGACGACACGCAGTTCGTGCGGTTCGACAGCGACGCGGCCACTGGGAGGACGGAGCCGCGGGCGCCGTGGGTGGAGCAGGAGGGGCCGGAGTATTGGGACCCGCAGACGCGGACCATCAAGGAGACCGCACAGCTGTACCGAGTGGACCTGGACACCCTGCGCGGCTACTACAACCAGAGCGAGGCCGGGTCTCACACCCGCCAGACCATGTACGGCTGTGACCTGGGGCCCGGCGGGCGCCTCCTCCGCGGGTACAGTCAGGACGCCTACGACGGCGCCGATTACATCGCCCTGAACGAGGACCTGCGCTCCTACACCGCGGCGGACACGGCGGCGCAGATCACCCGGCGCAAGTGGGAAGCGGCAGGTACTGCAGAGCACGATAGGAACTACCTGGAGACGACGTGCGTGGAGTGGCTGCGGAGGTACCTGGAGATGGGGAAGGAGACGCTGCAGCGCGCAG       Known allele    29069.0 0.157251481896  29069.0 89A_132C(116/265),89A_213A(46/107),89A_215C(46/106), …	89A:200,132C:186,213A:157, …	89A(44),89A;132C(71),89A;132C;213A;215C;216T;217G(2), …
-
 
