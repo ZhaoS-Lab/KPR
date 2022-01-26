@@ -38,8 +38,8 @@ Other parameters include 3) DLA-88 depth; 4) DLA-12 depth; and 5) Identical leng
 K=50     # K-mer length  
 N=1000     # The number of assembly runs  
 
-DLA88_cutoffDepth=30     # DLA-88 depth  
-DLA12_cutoffDepth=56     # DLA-12 depth  
+DLA88_cutoffDepth=15     # DLA-88 depth  
+DLA12_cutoffDepth=38     # DLA-12 depth  
 cutoffLength=270     # Tolerable identical sequence length shared by any two assemblies
 ```
 
