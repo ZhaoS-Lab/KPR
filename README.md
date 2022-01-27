@@ -21,7 +21,7 @@ The package contains a Unix/Linux shell script (KPR_canine_MHC-I_assemblerNgenot
 ### Steps to run the package  
 1. Downloading the package (Linux/Unix platform is required)  
 
-2. Modify the shell script by specifying the actual path to the Python script directory, the input RNA-seq fastq file directory, the result directory, and the reference directory, as well as the names of both the forward and reverse RNA-seq fastq files, as below.
+2. Modify the shell script (KPR_canine_MHC-I_assemblerNgenotyper.sh) by specifying the actual path to the Python script directory, the input RNA-seq fastq file directory, the result directory, and the reference directory, as well as the names of both the forward and reverse RNA-seq fastq files, as below.
 ```
 script=''     # path to the KPR scripts  
 data=''       # path to the RNA-seq paired-end fastq files  
@@ -52,7 +52,7 @@ module load SRA-Toolkit/2.10.8-centos_linux64
 module load Clustal-Omega/1.2.4-GCC-8.3.0  
 ```
 
-5.  Once the shell script is finishing running, the result file, Genotyping_result_withGeneAssignment.stat, will appear in the $result directory you specified, containing the following columns: 
+5.  Once the shell script execution is finished, the result file, Genotyping_result_withGeneAssignment.stat, will appear in the $result directory you specified, containing the following columns: 
 ```
 [1] Sample  
 [2] Contig name  
